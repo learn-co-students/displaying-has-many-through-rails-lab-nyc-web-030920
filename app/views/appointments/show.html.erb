@@ -1,0 +1,7 @@
+<h1>Appointment</h1>
+
+<%# page that shows the date, time, patient, and doctor for that particular appointment. Note that there should NOT be an Appointment#index page –– we don't want to have all of the appointments on display for anyone to see. %>
+
+<h3>Date: <%= @appointment.formatted_datetime %></h3>
+<h3>For: <%= link_to @appointment.patient_name, patient_path(@appointment.patient_id) %></h3>
+<h3>With Doctor:  <%= link_to @appointment.doctor_name, doctor_path(@appointment.doctor_id) %></h3>
