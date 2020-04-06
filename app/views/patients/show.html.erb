@@ -4,6 +4,6 @@
 Appointments: 
 <ul>
   <% @patient.appointments.each do |appt| %>
-    <%= appt.formatted_datetime %> <%= link_to appt.doctor_name, doctor_path(appt.doctor_id) %>
+    <%= appt.formatted_datetime %> <%= link_to appt.doctor.name, appt.doctor %><br>
   <% end %>
 </ul>
